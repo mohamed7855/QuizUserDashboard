@@ -1,0 +1,18 @@
+<div class="container px-5 mt-5">
+  <div class="row g-5 ">
+    @for (user of allUsers; track $index) {
+    <div class="col-md-6">
+      <div class="card p-2 border-2 bg-dark-subtle text-center" [routerLink]="['/details',user.id]">
+        <img src={{user.avatar}} class="card-img-top text-center m-auto rounded-circle" alt="User Image">
+        <div class="card-body p-2">
+          <h3 class="fw-bolder">{{user.first_name}} {{user.last_name}}</h3>
+          <p class="badge p-2 bg-dark my-0">ID: {{user.id}}</p>
+          <p class="badge p-2 bg-dark my-0 ms-2">{{user.email}}</p>
+        </div>
+      </div>
+    </div>
+    }
+
+    <app-pagination></app-pagination>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container px-5 mt-5">
+    <h2 class="text-center">USER DETAILS</h2>
+    @if (userData) {
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img [src]="userData.avatar" alt="User Image" class="w-75 rounded-2">
+        </div>
+        <div class="col-md-8 mt-3">
+            <p class="h2">FIRST-NAME: <span class="h4">{{userData.first_name}}</span></p>
+            <p class="h2">LAST-NAME: <span class="h4">{{userData.last_name}}</span></p>
+            <p class="h2">ID: <span class="h4">{{userData.id}}</span></p>
+            <p class="h2">E-MAIL: <span class="h4">{{userData.email}}</span></p>
+        </div>
+    </div>
+    }@else {
+    <div class="text-center">
+        <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+    </div>
+    }
+</div>
